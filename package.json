@@ -9,17 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/pro-theme": "^0.0.64",
+    "@chakra-ui/react": "^2.5.2",
+    "@daobox/use-aragon": "^0.0.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@rainbow-me/rainbowkit": "~0.12.1",
     "ethers": "^5.7.0",
+    "framer-motion": "^10.6.0",
     "next": "^13.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "wagmi": "~0.12.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "encoding": "^0.1.13",
     "eslint": "^8.15.0",
     "eslint-config-next": "^12.1.6",
     "typescript": "^4.9.4"

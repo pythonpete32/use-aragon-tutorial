@@ -1,18 +1,20 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
-
-import { Account } from '../components'
+import { Box, Center, VStack } from "@chakra-ui/react";
+import { useFetchDaos } from "@daobox/use-aragon";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 function Page() {
-  const { isConnected } = useAccount()
-  return (
-    <>
-      <h1>wagmi + RainbowKit + Next.js</h1>
+  const daos = useFetchDaos();
 
-      <ConnectButton />
-      {isConnected && <Account />}
-    </>
-  )
+  return (
+    <Center>
+      <VStack spacing={4} pt={10}>
+        <ConnectButton />
+        <Box borderRadius="lg" boxShadow="sm" p="6">
+          {daos.data && <pre>{JSON.stringify(daos?.data[0], null, 2)}</pre>}
+        </Box>
+      </VStack>
+    </Center>
+  );
 }
 
-export default Page
+export default Page;
